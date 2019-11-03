@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Stephanie Lu">
+		<title>Spellement</title>
+		<!-- Add additional CSS in static file -->
+		{% load static %}
+		<link rel="shortcut icon" href="{% static 'atom.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Manjari|Monoton&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<h1>
+			<img class="atom" src="{% static 'atom.png' %}">
+			<a href="{% url 'index' %}">Spellement</a>
+			<img class="atom" src="{% static 'atom.png' %}">
+		</h1>
+
+		<p><i>Enter a word to spell it using chemical elements!</i></p> 
+
+		<form action="{% url 'result' %}" method="get">
+    		<input id="input" type="text" name="input" value="{{ initial }}">
+    		<input id="button" type="submit" value="Elementize it!">
+		</form>
+		{% if error %}
+		<p id="error">{{ error }}</p>
+		{% endif %}
+
+		<br>
+		<blockquote cite="https://www.goodreads.com/quotes/144310-the-nitrogen-in-our-dna-the-calcium-in-our-teeth"> 
+			<p>“The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.” — Carl Sagan</p>
+		</blockquote>
+		<br>
+
+		{% block result %}
+		{% endblock %}
+
+		<br>
+		<br>
+		<footer>
+      	<p id="author">Made by Stephanie Lu in 2019</p>
+    	</footer>
+
+	</body>
+</html>

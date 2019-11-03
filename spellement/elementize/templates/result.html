@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block result %}
+  <hr>
+  <h2>"{{ input }}" becomes: </h2>
+
+  <div class="container">
+
+    {% for element in element_set %}
+      <div>
+        <div class="info">{{ element.number }}</div>
+        <div id="symbol">{{ element.symbol }}</div>
+        <div class="info">
+          {% if element.state != 'f' %}
+          <a href="https://en.wikipedia.org/wiki/{{element.name}}" target="_blank" title="Element info on Wikipedia">
+          {% endif %}
+          {{ element.name }}</a>
+        </div>
+        <div class="info">{{ element.mass }}</div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <br>
+  <p class="small">(If your input couldn't be spelled entirely with element symbols, we used some fictional ones!)</p>
+  <br>
+
+  {% load static %}
+  <a href="https://en.wikipedia.org/wiki/Periodic_table" target="_blank" title="Learn about the periodic table on Wikipedia">
+  <img src="{% static 'periodictable.png' %}" alt="The periodic table" width=90% height=auto>
+  </a>
+  <p class="small">Image from <a href="https://en.wikipedia.org/wiki/Periodic_table">Wikipedia</a></p>
+  	
+{% endblock %}
