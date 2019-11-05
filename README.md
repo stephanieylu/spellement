@@ -10,8 +10,8 @@ Try it out here: http://slu2000.pythonanywhere.com/elementize/
 * Django web framework (uses Python)
 
 Spellement is my first web application, and I created this project to learn more about web development. 
-I chose this project because I've often found myself staring at the periodic table poster in lecture, 
-spelling words in my head using the chemical symbols. I also love science, so this was a good way to combine my interests.
+I've often found myself staring at the periodic table poster in my lecture hall, 
+spelling words in my head using the chemical symbols. So I thought: why not make the computer do that for me? I also love science, so Spellement was a way to combine my interests.
 
 The elements and their corresponding information are not hard-coded into the program—
 they are stored in a database and can be manipulated through the Django admin website. 
