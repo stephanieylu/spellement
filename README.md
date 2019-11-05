@@ -1,5 +1,5 @@
 # Spellement
-A web application that spells user-inputed words with periodic table element symbols.
+A web application that spells user-inputted words with periodic table element symbols.
 
 Try it out here: http://slu2000.pythonanywhere.com/elementize/
 
